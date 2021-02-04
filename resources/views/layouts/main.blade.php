@@ -65,7 +65,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="user-profile-lite.html">
+                <a class="nav-link " href="{{Route('admin.pendaftaran.index')}}">
                   <i class="material-icons">file_present</i>
                   <span>Data Pendaftaran</span>
                 </a>

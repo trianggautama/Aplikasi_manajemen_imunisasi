@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BidanController;
 use App\Http\Controllers\AnakController;
 use App\Http\Controllers\VaksinController;
+use App\Http\Controllers\PendaftaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,17 @@ Route::namespace('admin')->prefix('admin')->name('admin.')->group(function(){
         Route::get('/{uuid}',[VaksinController::class, 'edit'])->name('edit');
         Route::put('/{uuid}', [VaksinController::class, 'update'])->name('update');  
         Route::get('/delete/{uuid}',[VaksinController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::namespace('pendaftaran')->prefix('pendaftaran')->name('pendaftaran.')->group(function(){
+        Route::get('/', [PendaftaranController::class, 'index'])->name('index');
+        Route::get('/data-anak/tambah', [PendaftaranController::class, 'anak'])->name('anak');
+        Route::post('/',[PendaftaranController::class, 'store'])->name('store');
+        Route::get('/detail/{uuid}',[PendaftaranController::class, 'show'])->name('show');
+        Route::get('/verif/{uuid}',[PendaftaranController::class, 'verif'])->name('verif');
+        Route::get('/{uuid}',[PendaftaranController::class, 'edit'])->name('edit');
+        Route::put('/{uuid}', [PendaftaranController::class, 'update'])->name('update');  
+        Route::get('/delete/{uuid}',[PendaftaranController::class, 'destroy'])->name('destroy');
     });
 
 });
