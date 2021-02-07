@@ -4,13 +4,13 @@
     <div class="row">
         <div class="col-md">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header"> 
                    <div class="row">
                        <div class="col-md">
                             <h5>Data Pegawai</h5>
                        </div>
                        <div class="col-md text-right">
-                            <a class="btn btn-primary" href="#"><i class="material-icons">print</i> Cetak Data</a>
+                            <a class="btn btn-primary" href="{{Route('admin.laporan.pegawai')}}" target="_blank"><i class="material-icons">print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">+ Tambah Data</button>
                        </div>
                    </div>

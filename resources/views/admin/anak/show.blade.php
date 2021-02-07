@@ -56,8 +56,8 @@
                     </table>
                 </div>
                 <div class="card-footer text-right">
-                    <a href="{{Route('admin.anak.index')}}" class="btn btn-secondary"><i class="material-icons">keyboard_arrow_left</i> Batal</a>
-                    <button type="button" class="btn btn-primary"><i class="material-icons">save</i> Simpan Data</button>
+                    <a href="{{Route('admin.anak.index')}}" class="btn btn-secondary"><i class="material-icons">keyboard_arrow_left</i> Kembali</a>
+                    <a href="{{Route('admin.kms.index',['uuid'=>'dacdhg'])}}" class="btn btn-primary"><i class="material-icons">accessibility</i> Data KMS Anak</a>
                 </div>
             </div>
         </div>

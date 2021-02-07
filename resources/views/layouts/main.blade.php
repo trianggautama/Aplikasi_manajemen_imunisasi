@@ -76,12 +76,6 @@
                   <span>Data Imunisasi</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link " href="errors.html">
-                  <i class="material-icons">error</i>
-                  <span>Data KMS</span>
-                </a>
-              </li>
             </ul>
           </div>
         </aside>
