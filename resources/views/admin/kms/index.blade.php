@@ -7,10 +7,10 @@
                 <div class="card-header">
                    <div class="row">
                        <div class="col-md">
-                            <h5>Data Vaksin</h5>
+                            <h5>Data Kms (Nama Anak)</h5>
                        </div>
                        <div class="col-md text-right">
-                            <a class="btn btn-primary" href="{{Route('admin.laporan.vaksin')}}"><i class="material-icons">print</i> Cetak Data</a>
+                            <a class="btn btn-primary" href="#"><i class="material-icons">print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">+ Tambah Data</button>
                        </div>
                    </div>
@@ -20,24 +20,24 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Vaksin</th>
-                            <th>Keterangan</th>
-                            <th>Pemberian Imunisasi</th>
-                            <th>Waktu Imunisasi</th>
-                            <th>Kategori Umur</th>
+                            <th>Imunisasi</th>
+                            <th>Tanggal Imunisasi</th>
+                            <th>Tinggi</th>
+                            <th>Berat</th>
+                            <th>Umur</th>
                             <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Vaksin 1</td>
-                            <td>keterangan cdbafjhgdahfgdhahk</td>
-                            <td> yajbcdgyghb</td>
-                            <td>20-02-2021</td>
-                            <td>1 -2 tahun</td>
+                            <td>Imunisasi 1</td>
+                            <td>2 Februari 2021</td>
+                            <td>40 cm</td>
+                            <td>26 kg</td>
+                            <td>5 tahun</td>
                             <td class="text-center">     
-                                <a class="btn btn-rounded btn-primary" href="{{Route('admin.vaksin.edit',['uuid'=>'526fhf'])}}"><i class="material-icons">edit</i></a>
+                                <a class="btn btn-rounded btn-primary" href="{{Route('admin.kms.edit',['uuid'=>'526fhf'])}}"><i class="material-icons">edit</i></a>
                                 <a class="btn btn-secondary" href="#"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>
@@ -45,11 +45,11 @@
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Nama Vaksin</th>
-                            <th>Keterangan</th>
-                            <th>Pemberian Imunisasi</th>
-                            <th>Waktu Imunisasi</th>
-                            <th>Kategori Umur</th>
+                            <th>Imunisasi</th>
+                            <th>Tanggal Imunisasi</th>
+                            <th>Tinggi</th>
+                            <th>Berat</th>
+                            <th>Umur</th>
                             <th class="text-center">Aksi</th>
                         </tr>
                     </tfoot>
@@ -71,52 +71,47 @@
       </div>
       <div class="modal-body">
         <form action="">
-            <div class="input-group mb-3">
-                <label for="">Nama Vaksin</label>
-                <div class="input-group input-group-seamless">
-                    <span class="input-group-prepend">
-                        <span class="input-group-text">
-                        <i class="material-icons">medication</i>
-                        </span>
-                    </span>
-                    <input type="text" class="form-control" id="form1-username" placeholder="Nama Pegawai"> 
-                </div>
+            <div class="form-group mb-3">
+                <label for="">Data Imunisasi</label>
+                <select name="" id="" class="form-control">
+                    <option value="">-- pilih imunisasi --</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="">Keteragan</label>
+                <label for="">Alamat</label>
                 <textarea name="" id="" class="form-control"></textarea>
             </div>
             <div class="input-group mb-3">
-                <label for="">Pemnberian Imunisasi</label>
+                <label for="">Tinggi</label>
                 <div class="input-group input-group-seamless">
                     <span class="input-group-prepend">
                         <span class="input-group-text">
-                        <i class="material-icons">insert_drive_file</i>
+                        <i class="material-icons">height</i>
                         </span>
                     </span>
-                    <input type="text" class="form-control" id="form1-username" placeholder=". . . "> 
+                    <input type="text" class="form-control" id="form1-username" maxlength="14"> 
                 </div>
             </div>
             <div class="input-group mb-3">
-                <label for="">Waktu Pemberian</label>
+                <label for="">Berat</label>
                 <div class="input-group input-group-seamless">
                     <span class="input-group-prepend">
                         <span class="input-group-text">
-                        <i class="material-icons">location_on</i>
+                        <i class="material-icons">monitor_weight</i>
                         </span>
                     </span>
-                    <input type="date" class="form-control" id="form1-username"> 
+                    <input type="text" class="form-control" id="form1-username"> 
                 </div>
             </div>
             <div class="input-group mb-3">
-                <label for="">Ketegori umur</label>
+                <label for="">Umur</label>
                 <div class="input-group input-group-seamless">
                     <span class="input-group-prepend">
                         <span class="input-group-text">
-                        <i class="material-icons">child_care</i>
+                        <i class="material-icons">mood</i>
                         </span>
                     </span>
-                    <input type="text" class="form-control" id="form1-username" placeholder="1-2 tahun"> 
+                    <input type="text" class="form-control" id="form1-username" value="ambil dari carbon age tanggal lahir"> 
                 </div>
             </div>
         </form>

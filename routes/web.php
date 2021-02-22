@@ -7,17 +7,8 @@ use App\Http\Controllers\BidanController;
 use App\Http\Controllers\AnakController;
 use App\Http\Controllers\VaksinController;
 use App\Http\Controllers\PendaftaranController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\KmsController;
+use App\Http\Controllers\LaporanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -72,6 +63,21 @@ Route::namespace('admin')->prefix('admin')->name('admin.')->group(function(){
         Route::get('/{uuid}',[PendaftaranController::class, 'edit'])->name('edit');
         Route::put('/{uuid}', [PendaftaranController::class, 'update'])->name('update');  
         Route::get('/delete/{uuid}',[PendaftaranController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::namespace('kms')->prefix('kms')->name('kms.')->group(function(){
+        Route::get('/{uuid}', [KmsController::class, 'index'])->name('index');
+        Route::post('/{uuid}',[KmsController::class, 'store'])->name('store');
+        Route::get('/edit/{uuid}',[KmsController::class, 'edit'])->name('edit');
+        Route::put('/update/{uuid}', [KmsController::class, 'update'])->name('update');  
+        Route::get('/delete/{uuid}',[KmsController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::namespace('laporan')->prefix('laporan')->name('laporan.')->group(function(){
+        Route::get('/pegawai', [LaporanController::class, 'pegawai'])->name('pegawai');
+        Route::get('/bidan', [LaporanController::class, 'bidan'])->name('bidan');
+        Route::get('/anak', [LaporanController::class, 'anak'])->name('anak');
+        Route::get('/vaksin', [LaporanController::class, 'vaksin'])->name('vaksin');
     });
 
 });

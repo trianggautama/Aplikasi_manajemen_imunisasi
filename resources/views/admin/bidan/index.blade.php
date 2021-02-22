@@ -10,7 +10,7 @@
                             <h5>Data Bidan</h5>
                        </div>
                        <div class="col-md text-right">
-                            <a class="btn btn-primary" href="#"><i class="material-icons">print</i> Cetak Data</a>
+                            <a class="btn btn-primary" href="{{Route('admin.laporan.bidan')}}" target="_blank"><i class="material-icons">print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">+ Tambah Data</button>
                        </div>
                    </div>

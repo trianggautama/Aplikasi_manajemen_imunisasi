@@ -10,7 +10,7 @@
                             <h5>Data Anak</h5>
                        </div>
                        <div class="col-md text-right">
-                            <a class="btn btn-primary" href="#"><i class="material-icons">print</i> Cetak Data</a>
+                            <a class="btn btn-primary" href="{{Route('admin.laporan.anak')}}" target="_blank"><i class="material-icons">print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">+ Tambah Data</button>
                        </div>
                    </div>
