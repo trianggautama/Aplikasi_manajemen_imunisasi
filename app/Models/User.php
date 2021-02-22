@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -16,11 +15,18 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $table = 'user';
+
+    protected $primaryKey = 'user_id';
+
+    protected $guarded = [''];
+
+    public $timestamps = false;
+
+    public function pegawai()
+    {
+        return $this->hasOne(Pegawai::class, 'user_id', 'user_id');
+    }
 
     /**
      * The attributes that should be hidden for arrays.
