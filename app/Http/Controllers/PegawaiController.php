@@ -46,9 +46,9 @@ class PegawaiController extends Controller
 
         $user->fill($reqUser)->save();
 
-        $user->pegawai()->fill($req->except('username', 'password', 'role'));
+        $user->pegawai->fill($req->except('username', 'password', 'role'))->save();
 
-        return back()->withToastSuccess('Data berhasil diubah');
+        return redirect()->route('admin.pegawai.index')->withToastSuccess('Data berhasil diubah');
 
     }
 

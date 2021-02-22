@@ -2,25 +2,51 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Anak;
 use Illuminate\Http\Request;
 
 class AnakController extends Controller
 {
     public function index()
     {
-
-        return view('admin.anak.index');
+        $data = Anak::all();
+        return view('admin.anak.index', compact('data'));
     }
 
-    public function show()
+    public function store(Request $req)
     {
+        $data = Anak::create($req->all());
 
-        return view('admin.anak.show');
+        return back()->withToastSuccess('Data berhasil disimpan');
     }
 
-    public function edit()
+    public function show($uuid)
     {
+        $data = Anak::findOrFail($uuid);
 
-        return view('admin.anak.edit');
+        return view('admin.anak.show', compact('data'));
+    }
+
+    public function edit($uuid)
+    {
+        $data = Anak::findOrFail($uuid);
+
+        return view('admin.anak.edit', compact('anak'));
+    }
+
+    public function update($uuid, Request $req)
+    {
+        $data = Anak::findOrFail($uuid);
+
+        $data->fill($req->all())->save();
+
+        return redirect()->route('admin.anak.index')->withToastSuccess('Data berhasil diubah');
+    }
+
+    public function destroy($uuid)
+    {
+        $data = Anak::findOrFail($uuid)->delete();
+
+        return back()->withToastSuccess('Data berhasil dihapus');
     }
 }

@@ -28,6 +28,11 @@ class User extends Authenticatable
         return $this->hasOne(Pegawai::class, 'user_id', 'user_id');
     }
 
+    public function bidan()
+    {
+        return $this->hasOne(Bidan::class, 'user_id', 'user_id');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

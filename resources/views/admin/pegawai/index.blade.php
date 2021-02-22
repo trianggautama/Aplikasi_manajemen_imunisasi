@@ -42,7 +42,7 @@
                                 <td>{{$d->user->username}}</td>
                                 <td class="text-center">
                                     <a class="btn btn-rounded btn-primary"
-                                        href="{{Route('admin.pegawai.edit',['uuid'=>$d->pegawai_id])}}"><i
+                                        href="{{Route('admin.pegawai.edit',['uuid'=>$d->user_id])}}"><i
                                             class="material-icons">edit</i></a>
                                     <a class="btn btn-secondary" href="#"><i class="material-icons">delete</i></a>
                                 </td>
@@ -143,7 +143,8 @@
                                     <i class="material-icons">phone</i>
                                 </span>
                             </span>
-                            <input type="text" name="no_hp" class="form-control" id="form1-username" maxlength="14">
+                            <input type="text" name="no_hp" class="form-control" id="form1-username" maxlength="14"
+                                required>
                         </div>
                     </div>
                     <hr>
