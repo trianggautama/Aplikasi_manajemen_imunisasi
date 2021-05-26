@@ -25,7 +25,7 @@ Route::namespace('admin')->prefix('admin')->name('admin.')->group(function(){
         Route::post('/',[PegawaiController::class, 'store'])->name('store');
         Route::get('/{uuid}',[PegawaiController::class, 'edit'])->name('edit');
         Route::put('/{uuid}', [PegawaiController::class, 'update'])->name('update');  
-        Route::get('/delete/{uuid}',[PegawaiController::class, 'destroy'])->name('destroy');
+        Route::get('/delete/{uuid}',[PegawaiController::class, 'destroy'])->name('destroy'); 
     });
 
     Route::namespace('bidan')->prefix('bidan')->name('bidan.')->group(function(){

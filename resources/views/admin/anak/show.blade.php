@@ -15,44 +15,42 @@
                     <table class="table table-striped">
                         <tr>
                             <td style="width:20%">Nama Anak</td>
-                            <td style="width:10%">: {{$data->nama_anak}}</td>
+                            <td>: {{$data->nama_anak}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
-                            <td style="width:10%">: {{$data->alamat}}</td>
+                            <td>: {{$data->alamat}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
-                            <td style="width:10%">: {{$data->jk}}</td>
+                            <td>: {{$data->jk}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Tempat, Tanggal Lahir</td>
-                            <td style="width:10%">: {{$data->tempat_lahir}},
+                            <td>: {{$data->tempat_lahir}},
                                 {{carbon\carbon::parse($data->tanggal_lahir)->translatedFormat('d M Y')}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Nama Ayah</td>
-                            <td style="width:10%">: {{$data->nama_ayah}}</td>
+                            <td>: {{$data->nama_ayah}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Nama Ibu</td>
-                            <td style="width:10%">: {{$data->nama_ibu}}</td>
+                            <td>: {{$data->nama_ibu}}</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>No. Hp</td>
-                            <td style="width:10%">: {{$data->no_hp}}</td>
-                            <td></td>
+                            <td>: {{$data->no_hp}}</td>
                         </tr>
                         <tr>
                             <td>Kelurahan</td>
-                            <td style="width:10%">: {{$data->nama_kelurahan}}</td>
-                            <td></td>
+                            <td>: {{$data->nama_kelurahan}}</td>
                         </tr>
                     </table>
                 </div>

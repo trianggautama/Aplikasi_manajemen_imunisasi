@@ -1,6 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Anak;
+use App\Models\Bidan;
+use App\Models\Pegawai;
+use App\Models\Vaksin;
 use PDF;
 use Illuminate\Http\Request;
 
@@ -8,7 +13,7 @@ class LaporanController extends Controller
 {
     public function pegawai()
     {
-        $data     = null;
+        $data     = Pegawai::all(); 
         $pdf      = PDF::loadView('laporan.pegawai', ['data'=>$data]);
         $pdf->setPaper('a4', 'landscape');
 
@@ -17,7 +22,7 @@ class LaporanController extends Controller
 
     public function bidan()
     {
-        $data     = null;
+        $data     = Bidan::all();
         $pdf      = PDF::loadView('laporan.bidan', ['data'=>$data]);
         $pdf->setPaper('a4', 'landscape');
 
@@ -26,7 +31,7 @@ class LaporanController extends Controller
 
     public function anak()
     {
-        $data     = null;
+        $data     = Anak::all();
         $pdf      = PDF::loadView('laporan.anak', ['data'=>$data]);
         $pdf->setPaper('a4', 'landscape');
 
@@ -35,7 +40,7 @@ class LaporanController extends Controller
 
     public function vaksin()
     {
-        $data     = null;
+        $data     = Vaksin::all();
         $pdf      = PDF::loadView('laporan.vaksin', ['data'=>$data]);
         $pdf->setPaper('a4', 'landscape');
 

@@ -10,8 +10,8 @@
                             <h5>Data Vaksin</h5>
                         </div>
                         <div class="col-md text-right">
-                            <a class="btn btn-primary" href="{{Route('admin.laporan.vaksin')}}"><i
-                                    class="material-icons">print</i> Cetak Data</a>
+                            <a class="btn btn-primary" href="{{Route('admin.laporan.vaksin')}}" target="_blank"><i
+                                    class="material-icons" >print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target=".bd-example-modal-lg">+ Tambah Data</button>
                         </div>
@@ -38,27 +38,16 @@
                                 <td>{{$d->keterangan}}</td>
                                 <td>{{$d->p_imunisasi}}</td>
                                 <td>{{$d->waktu_pemberian}}</td>
-                                <td>{{$d->k_umur}}</td>
+                                <td>{{$d->k_umur}}</td> 
                                 <td class="text-center">
                                     <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.vaksin.edit',['uuid'=> $d->vaksin_id])}}"><i
                                             class="material-icons">edit</i></a>
-                                    <a class="btn btn-secondary" href="#"><i class="material-icons">delete</i></a>
+                                    <a href="{{Route('admin.vaksin.destroy',['uuid'=>$d->vaksin_id])}}" class="btn btn-secondary" onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Vaksin</th>
-                                <th>Keterangan</th>
-                                <th>Pemberian Imunisasi</th>
-                                <th>Waktu Imunisasi</th>
-                                <th>Kategori Umur</th>
-                                <th class="text-center">Aksi</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

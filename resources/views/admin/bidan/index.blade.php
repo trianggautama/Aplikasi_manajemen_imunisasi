@@ -44,22 +44,11 @@
                                     <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.bidan.edit',['uuid'=>$d->user_id])}}"><i
                                             class="material-icons">edit</i></a>
-                                    <a class="btn btn-secondary" href="#"><i class="material-icons">delete</i></a>
+                                    <a href="{{Route('admin.bidan.destroy',['uuid'=>$d->user_id])}}" class="btn btn-secondary" onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Tempat, Tanggal Lahir</th>
-                                <th>No Hp</th>
-                                <th>Username</th>
-                                <th class="text-center">Aksi</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

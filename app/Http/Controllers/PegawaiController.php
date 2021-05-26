@@ -11,7 +11,7 @@ class PegawaiController extends Controller
 {
     public function index()
     {
-        $data = Pegawai::all();
+        $data = Pegawai::all(); 
         return view('admin.pegawai.index', compact('data'));
     }
 
