@@ -7,7 +7,7 @@
                 <div class="card-header">
                    <div class="row">
                        <div class="col-md">
-                            <h5>Data Kms (Nama Anak)</h5>
+                            <h5>Data Kms ( {{$anak->nama_anak}} )</h5>
                        </div>
                        <div class="col-md text-right">
                             <a class="btn btn-primary" href="#"><i class="material-icons">print</i> Cetak Data</a>
@@ -41,18 +41,7 @@
                                 <a class="btn btn-secondary" href="#"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>No</th>
-                            <th>Imunisasi</th>
-                            <th>Tanggal Imunisasi</th>
-                            <th>Tinggi</th>
-                            <th>Berat</th>
-                            <th>Umur</th>
-                            <th class="text-center">Aksi</th>
-                        </tr>
-                    </tfoot>
+                    </tbody>    
                 </table>
                 </div>
             </div>
@@ -76,10 +65,6 @@
                 <select name="" id="" class="form-control">
                     <option value="">-- pilih imunisasi --</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="">Alamat</label>
-                <textarea name="" id="" class="form-control"></textarea>
             </div>
             <div class="input-group mb-3">
                 <label for="">Tinggi</label>

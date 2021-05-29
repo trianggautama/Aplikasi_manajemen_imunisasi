@@ -111,7 +111,7 @@
                                     <i class="material-icons">medication</i>
                                 </span>
                             </span>
-                            <input type="text" class="form-control" id="form1-username" placeholder="Nama Pegawai">
+                            <input type="text" class="form-control" id="form1-username" placeholder="Nama Anak">
                         </div>
                     </div>
                     <div class="row">
@@ -136,14 +136,14 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <label for="">Nama Orangtua</label>
+                        <label for="">Nama Orangtua (Ibu)</label>
                         <div class="input-group input-group-seamless">
                             <span class="input-group-prepend">
                                 <span class="input-group-text">
                                     <i class="material-icons">medication</i>
                                 </span>
                             </span>
-                            <input type="text" class="form-control" id="form1-username" placeholder="Nama Pegawai">
+                            <input type="text" class="form-control" id="form1-username" placeholder="Nama Orang Tua (Ibu)">
                         </div>
                     </div>
                     <div class="form-group">
