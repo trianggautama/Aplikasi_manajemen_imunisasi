@@ -14,7 +14,9 @@
   <link href="{{asset('template_depan/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{asset('template_depan/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -71,8 +73,8 @@
   </section><!-- End Hero -->
 
   <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -87,16 +89,20 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
               magna aliqua.
             </p>
             <ul>
               <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
               <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
+                pariatur.</li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate
             </p>
             <a href="about.html" class="learn-more-btn">Learn More</a>
           </div>
@@ -104,8 +110,8 @@
 
       </div>
     </section><!-- End About Section -->
-      <!-- ======= Counts Section ======= -->
-      <section id="counts" class="counts section-bg">
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
       <div class="container">
 
         <div class="row counters">
@@ -135,37 +141,42 @@
       </div>
     </section><!-- End Counts Section -->
     <section>
-        <div class="container" data-aos="fade-up">
-            <div class="text-center">
-              <h3>Pendaftaran Imunisasi</h3>
-            </div>
-            <br>
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="form-row">
-                    <div class="col-md-6 form-group">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Nama Anak"  />
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Nama Orang Tua"/>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-6 form-group">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Tempat Lahir"  />
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <input type="date" class="form-control" name="email" id="email" placeholder="Nama Orang Tua"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Alamat"></textarea>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nomor Telepon"  />
-                </div>
-                <div class="text-right"><button class="get-started-btn" type="submit">Kirim Pendaftaran</button></div>
-                </form>
+      <div class="container" data-aos="fade-up">
+        <div class="text-center">
+          <h3>Pendaftaran Imunisasi</h3>
         </div>
+        <br>
+        <form action="{{Route('storePendaftaran')}}" method="POST">
+          @csrf
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Anak" required />
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" class="form-control" name="nama_orang_tua" id="nama"
+                placeholder="Nama Orang Tua (Ibu)" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="tempat_lahir" class="form-control" id="tempat_lahir" placeholder="Tempat Lahir"
+                required />
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahir"
+                placeholder="Nama Orang Tua" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="alamat" rows="5" placeholder="Alamat" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" name="nomor_telepon" class="form-control" id="nomor_telepon" placeholder="Nomor Telepon"
+              required />
+          </div>
+          <div class="text-right"><button class="get-started-btn" type="submit">Kirim Pendaftaran</button></div>
+        </form>
+      </div>
     </section>
 
 
@@ -201,6 +212,7 @@
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
   <div id="preloader"></div>
 
+  @include('sweetalert::alert')
   <!-- Vendor JS Files -->
   <script src="{{asset('template_depan/assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('template_depan/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
