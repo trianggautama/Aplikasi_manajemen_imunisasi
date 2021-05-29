@@ -8,6 +8,7 @@ use App\Http\Controllers\AnakController;
 use App\Http\Controllers\VaksinController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\KmsController;
+use App\Http\Controllers\ImunisasiController;
 use App\Http\Controllers\LaporanController;
 
 Route::get('/', function () {
@@ -71,6 +72,14 @@ Route::namespace('admin')->prefix('admin')->name('admin.')->group(function(){
         Route::get('/edit/{uuid}',[KmsController::class, 'edit'])->name('edit');
         Route::put('/update/{uuid}', [KmsController::class, 'update'])->name('update');  
         Route::get('/delete/{uuid}',[KmsController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::namespace('imunisasi')->prefix('imunisasi')->name('imunisasi.')->group(function(){
+        Route::get('/', [ImunisasiController::class, 'index'])->name('index');
+        Route::post('/',[ImunisasiController::class, 'store'])->name('store');
+        Route::get('/edit/{uuid}',[ImunisasiController::class, 'edit'])->name('edit');
+        Route::put('/update/{uuid}', [ImunisasiController::class, 'update'])->name('update');  
+        Route::get('/delete/{uuid}',[ImunisasiController::class, 'destroy'])->name('destroy');
     });
 
     Route::namespace('laporan')->prefix('laporan')->name('laporan.')->group(function(){

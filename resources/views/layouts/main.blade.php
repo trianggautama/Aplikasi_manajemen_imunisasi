@@ -75,7 +75,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="errors.html">
+              <a class="nav-link " href="{{Route('admin.imunisasi.index')}}">
                 <i class="material-icons">event_note</i>
                 <span>Data Imunisasi</span>
               </a>
