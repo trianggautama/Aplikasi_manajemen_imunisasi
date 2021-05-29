@@ -18,12 +18,12 @@ class CreateBalitasTable extends Migration
             $table->string('nama_anak', 50);
             $table->string('tempat_lahir', 100);
             $table->date('tanggal_lahir');
-            $table->string('jk', 20);
-            $table->string('nama_ayah', 100);
+            $table->string('jk', 20)->nullable();
+            $table->string('nama_ayah', 100)->nullable();
             $table->string('nama_ibu', 100);
             $table->string('alamat', 50);
             $table->string('no_hp');
-            $table->string('nama_kelurahan', 20);
+            $table->string('nama_kelurahan', 20)->nullable();
 
         });
     }

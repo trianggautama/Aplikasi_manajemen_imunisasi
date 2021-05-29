@@ -21,6 +21,7 @@ class CreatePasiensTable extends Migration
             $table->string('nama_orang_tua', 50);
             $table->string('tempat_lahir', 50);
             $table->date('tanggal_lahir');
+            $table->tinyInteger('status')->default(0);
         });
     }
 
