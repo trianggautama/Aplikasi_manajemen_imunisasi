@@ -25,6 +25,10 @@
                             <label for="">Tanggal Imunisasi</label>
                             <input type="date" class="form-control">
                         </div>
+                        <div class="form-group">
+                        <label for="">Tempat Imunisasi</label>
+                        <input type="text" class="form-control">
+                    </div>
                     </div>
                         <div class="card-footer text-right">
                             <a href="{{Route('admin.imunisasi.index')}}" class="btn btn-secondary"><i
