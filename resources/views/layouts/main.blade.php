@@ -145,13 +145,17 @@
                   aria-haspopup="true" aria-expanded="false">
                   <img class="user-avatar rounded-circle mr-2" src="{{asset('asset_template/images/avatars/0.jpg')}}"
                     alt="User Avatar">
-                  <span class="d-none d-md-inline-block">Nama Admin</span>
+                  <span class="d-none d-md-inline-block">{{Auth::user()->pegawai->nama}}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-small">
                   <a class="dropdown-item" href="user-profile-lite.html">
                     <i class="material-icons">&#xE7FD;</i> Profile</a>
-                  <a class="dropdown-item text-danger" href="#">
-                    <i class="material-icons text-danger">&#xE879;</i> Logout </a>
+                  <a class="dropdown-item text-danger" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+                      class="material-icons text-danger">&#xE879;</i>Logout</a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                  </form>
                 </div>
               </li>
             </ul>
