@@ -39,7 +39,7 @@
         <div class="nav-wrapper">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">
+              <a class="nav-link active" href="{{route('admin.beranda')}}">
                 <i class="material-icons">home</i>
                 <span>Beranda</span>
               </a>
@@ -143,7 +143,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button"
                   aria-haspopup="true" aria-expanded="false">
-                  <img class="user-avatar rounded-circle mr-2" src="{{asset('asset_template/images/avatars/0.jpg')}}"
+                  <img class="user-avatar rounded-circle mr-2" src="{{asset('asset_template/images/avatars/user.png')}}"
                     alt="User Avatar">
                   <span class="d-none d-md-inline-block">{{Auth::user()->pegawai->nama}}</span>
                 </a>

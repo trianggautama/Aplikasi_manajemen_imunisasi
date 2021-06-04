@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Anak;
+use App\Models\Bidan;
+use App\Models\JadwalImunisasi;
+use App\Models\Pegawai;
+use App\Models\Vaksin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +19,12 @@ class MainController extends Controller
 
     public function beranda()
     {
-        return view('admin.index');
+        $pegawai    = Pegawai::count();
+        $bidan      = Bidan::count();
+        $vaksin     = Vaksin::count();
+        $anak       = Anak::count();
+        $imunisasi  = JadwalImunisasi::count();
+        return view('admin.index',compact('pegawai','bidan','vaksin','anak','imunisasi'));
     }
 
     public function login()
