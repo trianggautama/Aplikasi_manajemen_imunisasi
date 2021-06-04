@@ -69,18 +69,18 @@ Route::namespace ('admin')->prefix('admin')->name('admin.')->group(function () {
 
     Route::namespace ('kms')->prefix('kms')->name('kms.')->group(function () {
         Route::get('/{uuid}', [KmsController::class, 'index'])->name('index');
-        Route::post('/{uuid}', [KmsController::class, 'store'])->name('store');
+        Route::post('/store', [KmsController::class, 'store'])->name('store');
         Route::get('/edit/{uuid}', [KmsController::class, 'edit'])->name('edit');
         Route::put('/update/{uuid}', [KmsController::class, 'update'])->name('update');
         Route::get('/delete/{uuid}', [KmsController::class, 'destroy'])->name('destroy');
     });
 
-    Route::namespace('imunisasi')->prefix('imunisasi')->name('imunisasi.')->group(function(){
+    Route::namespace ('imunisasi')->prefix('imunisasi')->name('imunisasi.')->group(function () {
         Route::get('/', [ImunisasiController::class, 'index'])->name('index');
-        Route::post('/',[ImunisasiController::class, 'store'])->name('store');
-        Route::get('/edit/{uuid}',[ImunisasiController::class, 'edit'])->name('edit');
-        Route::put('/update/{uuid}', [ImunisasiController::class, 'update'])->name('update');  
-        Route::get('/delete/{uuid}',[ImunisasiController::class, 'destroy'])->name('destroy');
+        Route::post('/', [ImunisasiController::class, 'store'])->name('store');
+        Route::get('/edit/{uuid}', [ImunisasiController::class, 'edit'])->name('edit');
+        Route::put('/update/{uuid}', [ImunisasiController::class, 'update'])->name('update');
+        Route::get('/delete/{uuid}', [ImunisasiController::class, 'destroy'])->name('destroy');
     });
 
     Route::namespace ('laporan')->prefix('laporan')->name('laporan.')->group(function () {
