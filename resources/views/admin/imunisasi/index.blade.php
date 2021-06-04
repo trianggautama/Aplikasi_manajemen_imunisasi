@@ -97,6 +97,10 @@
                         <label for="">Tempat Imunisasi</label>
                         <input type="text" name="tempat_imunisasi" class="form-control" required>
                     </div>
+                    <div class="form-group">
+                        <label for="">Tempat Imunisasi</label>
+                        <input type="text" class="form-control">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i
