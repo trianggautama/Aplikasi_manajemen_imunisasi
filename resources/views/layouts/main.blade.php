@@ -57,12 +57,6 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="{{Route('admin.anak.index')}}">
-                <i class="material-icons">face</i>
-                <span>Data Anak</span>
-              </a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link " href="{{Route('admin.vaksin.index')}}">
                 <i class="material-icons">healing</i>
                 <span>Data Vaksin</span>
@@ -75,17 +69,23 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link " href="{{Route('admin.anak.index')}}">
+                <i class="material-icons">face</i>
+                <span>Data Anak</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link " href="{{Route('admin.imunisasi.index')}}">
                 <i class="material-icons">event_note</i>
                 <span>Data Imunisasi</span>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link " href="errors.html">
                 <i class="material-icons">error</i>
                 <span>Data KMS</span>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </aside>

@@ -24,6 +24,14 @@ class ImunisasiController extends Controller
         return back()->withToastSuccess('Data berhasil disimpan');
     }
 
+    public function show($id)
+    {
+
+        $data = JadwalImunisasi::findOrFail($id);
+
+        return view('admin.imunisasi.show', compact('data'));
+    }
+
     public function edit($id)
     {
 

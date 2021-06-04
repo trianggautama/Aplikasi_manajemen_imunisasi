@@ -91,23 +91,25 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>ID Pegawai</th>
                             <th>Nama</th>
+                            <th>Alamat</th>
                             <th>Jenis Kelamin</th>
                             <th>Tempat, Tanggal Lahir</th>
                             <th>No Hp</th>
-                            <th>Username</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($data as $d)
                         <tr>
                             <td>{{$loop->iteration}}</td>
+                            <td>{{$d->pegawai_id}}</td>
                             <td>{{$d->nama}}</td>
+                            <td>{{$d->alamat}}</td>
                             <td>{{$d->jk}}</td>
                             <td>{{$d->tempat_lahir}},
                                 {{carbon\carbon::parse($d->tgl_lahir)->translatedFormat('d M Y')}}</td>
                             <td>{{$d->no_hp}}</td>
-                            <td>{{$d->user->username}}</td>
                         </tr>
                         @endforeach
                     </tbody>

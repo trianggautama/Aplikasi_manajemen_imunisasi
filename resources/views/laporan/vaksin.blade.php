@@ -91,6 +91,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
+                        <th>Id Vaksin</th>
                         <th>Nama Vaksin</th>
                         <th>Keterangan</th>
                         <th>Pemberian Imunisasi</th>
@@ -102,6 +103,7 @@
                     @foreach($data as $d)
                     <tr>
                         <td>{{$loop->iteration}}</td>
+                        <td>{{$d->vaksin_id}}</td>
                         <td>{{$d->nama_vaksin}}</td>
                         <td>{{$d->keterangan}}</td>
                         <td>{{$d->p_imunisasi}}</td>
