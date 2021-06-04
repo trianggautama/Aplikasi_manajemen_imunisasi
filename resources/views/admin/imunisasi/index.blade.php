@@ -72,6 +72,10 @@
                         <label for="">Tanggal Imunisasi</label>
                         <input type="date" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label for="">Tempat Imunisasi</label>
+                        <input type="text" class="form-control">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i
