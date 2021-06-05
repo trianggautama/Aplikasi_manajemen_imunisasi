@@ -39,7 +39,7 @@
         <div class="nav-wrapper">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">
+              <a class="nav-link active" href="{{route('admin.beranda')}}">
                 <i class="material-icons">home</i>
                 <span>Beranda</span>
               </a>
@@ -57,12 +57,6 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="{{Route('admin.anak.index')}}">
-                <i class="material-icons">face</i>
-                <span>Data Anak</span>
-              </a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link " href="{{Route('admin.vaksin.index')}}">
                 <i class="material-icons">healing</i>
                 <span>Data Vaksin</span>
@@ -75,17 +69,23 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link " href="{{Route('admin.anak.index')}}">
+                <i class="material-icons">face</i>
+                <span>Data Anak</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link " href="{{Route('admin.imunisasi.index')}}">
                 <i class="material-icons">event_note</i>
                 <span>Data Imunisasi</span>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link " href="errors.html">
                 <i class="material-icons">error</i>
                 <span>Data KMS</span>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </aside>
@@ -143,7 +143,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button"
                   aria-haspopup="true" aria-expanded="false">
-                  <img class="user-avatar rounded-circle mr-2" src="{{asset('asset_template/images/avatars/0.jpg')}}"
+                  <img class="user-avatar rounded-circle mr-2" src="{{asset('asset_template/images/avatars/user.png')}}"
                     alt="User Avatar">
                   <span class="d-none d-md-inline-block">{{Auth::user()->pegawai->nama}}</span>
                 </a>

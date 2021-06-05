@@ -27,11 +27,8 @@
             <div class="card-body p-0 d-flex">
             <div class="d-flex flex-column m-auto">
                 <div class="stats-small__data text-center">
-                <span class="stats-small__label text-uppercase">Posts</span>
-                <h6 class="stats-small__value count my-3">2,390</h6>
-                </div>
-                <div class="stats-small__data">
-                <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                <span class="stats-small__label text-uppercase">Pegawai</span>
+                <h6 class="stats-small__value count my-3">{{$pegawai}} <small>orang</small></h6>
                 </div>
             </div>
             <canvas height="120" class="blog-overview-stats-small-1"></canvas>
@@ -43,11 +40,8 @@
             <div class="card-body p-0 d-flex">
             <div class="d-flex flex-column m-auto">
                 <div class="stats-small__data text-center">
-                <span class="stats-small__label text-uppercase">Pages</span>
-                <h6 class="stats-small__value count my-3">182</h6>
-                </div>
-                <div class="stats-small__data">
-                <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                <span class="stats-small__label text-uppercase">Bidan</span>
+                <h6 class="stats-small__value count my-3">{{$bidan}} <small>orang</small></h6>
                 </div>
             </div>
             <canvas height="120" class="blog-overview-stats-small-2"></canvas>
@@ -59,11 +53,8 @@
             <div class="card-body p-0 d-flex">
             <div class="d-flex flex-column m-auto">
                 <div class="stats-small__data text-center">
-                <span class="stats-small__label text-uppercase">Comments</span>
-                <h6 class="stats-small__value count my-3">8,147</h6>
-                </div>
-                <div class="stats-small__data">
-                <span class="stats-small__percentage stats-small__percentage--decrease">3.8%</span>
+                <span class="stats-small__label text-uppercase">Jenis Vaksin</span>
+                <h6 class="stats-small__value count my-3">{{$vaksin}} <small>jenis vaksin</small> </h6>
                 </div>
             </div>
             <canvas height="120" class="blog-overview-stats-small-3"></canvas>
@@ -75,11 +66,8 @@
             <div class="card-body p-0 d-flex">
             <div class="d-flex flex-column m-auto">
                 <div class="stats-small__data text-center">
-                <span class="stats-small__label text-uppercase">Users</span>
-                <h6 class="stats-small__value count my-3">2,413</h6>
-                </div>
-                <div class="stats-small__data">
-                <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                <span class="stats-small__label text-uppercase">Anak</span>
+                <h6 class="stats-small__value count my-3">{{$anak}} <small>anak</small></h6>
                 </div>
             </div>
             <canvas height="120" class="blog-overview-stats-small-4"></canvas>
@@ -91,11 +79,8 @@
             <div class="card-body p-0 d-flex">
             <div class="d-flex flex-column m-auto">
                 <div class="stats-small__data text-center">
-                <span class="stats-small__label text-uppercase">Subscribers</span>
-                <h6 class="stats-small__value count my-3">17,281</h6>
-                </div>
-                <div class="stats-small__data">
-                <span class="stats-small__percentage stats-small__percentage--decrease">2.4%</span>
+                <span class="stats-small__label text-uppercase">Imunisasi</span>
+                <h6 class="stats-small__value count my-3">{{$imunisasi}} <small>pelaksanaan</small></h6>
                 </div>
             </div>
             <canvas height="120" class="blog-overview-stats-small-5"></canvas>

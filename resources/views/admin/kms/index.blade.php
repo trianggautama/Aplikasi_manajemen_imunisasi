@@ -81,7 +81,7 @@
                         </select>
                     </div>
                     <div class="input-group mb-3">
-                        <label for="">Tinggi</label>
+                        <label for="">Tinggi (cm)</label>
                         <div class="input-group input-group-seamless">
                             <span class="input-group-prepend">
                                 <span class="input-group-text">
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <label for="">Berat</label>
+                        <label for="">Berat (kg)</label>
                         <div class="input-group input-group-seamless">
                             <span class="input-group-prepend">
                                 <span class="input-group-text">
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <label for="">Umur</label>
+                        <label for="">Umur (bulan)</label>
                         <div class="input-group input-group-seamless">
                             <span class="input-group-prepend">
                                 <span class="input-group-text">

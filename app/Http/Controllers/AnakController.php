@@ -31,7 +31,7 @@ class AnakController extends Controller
     {
         $data = Anak::findOrFail($uuid);
 
-        return view('admin.anak.edit', compact('data', 'kms'));
+        return view('admin.anak.edit', compact('data'));
     }
 
     public function update($uuid, Request $req)

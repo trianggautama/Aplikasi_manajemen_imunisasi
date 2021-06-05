@@ -48,7 +48,7 @@ Route::middleware(['admin'])->group(function () {
             Route::get('/detail/{uuid}', [AnakController::class, 'show'])->name('show');
             Route::get('/{uuid}', [AnakController::class, 'edit'])->name('edit');
             Route::put('/{uuid}', [AnakController::class, 'update'])->name('update');
-            Route::get('/delete/{uuid}', [AnakController::class, 'destroy'])->name('destroy');
+            Route::get('/delete/{uuid}', [AnakController::class, 'destroy'])->name('destroy'); 
         });
 
         Route::namespace ('vaksin')->prefix('vaksin')->name('vaksin.')->group(function () {
@@ -82,6 +82,7 @@ Route::middleware(['admin'])->group(function () {
         Route::namespace ('imunisasi')->prefix('imunisasi')->name('imunisasi.')->group(function () {
             Route::get('/', [ImunisasiController::class, 'index'])->name('index');
             Route::post('/', [ImunisasiController::class, 'store'])->name('store');
+            Route::get('/show/{uuid}', [ImunisasiController::class, 'show'])->name('show');
             Route::get('/edit/{uuid}', [ImunisasiController::class, 'edit'])->name('edit');
             Route::put('/update/{uuid}', [ImunisasiController::class, 'update'])->name('update');
             Route::get('/delete/{uuid}', [ImunisasiController::class, 'destroy'])->name('destroy');
@@ -92,6 +93,7 @@ Route::middleware(['admin'])->group(function () {
             Route::get('/bidan', [LaporanController::class, 'bidan'])->name('bidan');
             Route::get('/anak', [LaporanController::class, 'anak'])->name('anak');
             Route::get('/vaksin', [LaporanController::class, 'vaksin'])->name('vaksin');
+            Route::get('/pendaftaran', [LaporanController::class, 'pendaftaran'])->name('pendaftaran');
         });
 
     });

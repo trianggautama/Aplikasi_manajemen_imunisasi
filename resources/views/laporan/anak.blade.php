@@ -8,7 +8,6 @@
     <style>
     *{
         font-family:arial;
-        font-size: 12px ;
     }
     body{
         font-family:arial !important;
@@ -17,7 +16,7 @@
         border-collapse: collapse;
         width:100%;
       }
-         table, th, td{
+    table, th, td{
         border: 1px solid #708090;
       }
       th{
@@ -39,7 +38,7 @@
          padding: 0px;
      }
      .pemko{
-         width:100px;
+         width:80px;
      }
      .bakti_husada{
          width:140px;
@@ -52,9 +51,9 @@
          text-align: right;
      }
      .headtext{
-         float:right;
+         /* float:right; */
          margin-left: 0px;
-         width: 80%;
+         width: 100%;
          padding-left:60px !important;
          padding-right:8%;
      }
@@ -72,45 +71,85 @@
      }
 
      @page { 
-         size: 21.5 cm  29 cm ; 
+        size: 29 cm 21.5 cm ; 
          margin: 1 cm 1 cm 0 cm 1 cm !important;
          padding: 0px !important;
          }
     </style>
 </head>
 <body>
-
+<div class="header" style="padding=0px; margin:0px">
+            <table style="border: none"> 
+                <tr style="border: none">
+                    <td style="width:20%; border: none;"> <img  class="pemko" src="asset_template/images/pemkab.png"></td>
+                    <td style="width:60%; border: none">
+                        <h4 style="margin:0px; border: none">PEMERINTAH KABUPATEN TANAH LAUT </h4>
+                        <h2 style="margin:0px; border: none">DINAS KESEHATAN </h2>
+                        <h2 style="margin:0px; border: none">PUSKESMAS PELAIHARI </h2>
+                        <p style="margin:0px; border: none">Karang Taruna, Pelaihari, Tanah Laut, Pelaihari, Tanah Laut, Kabupatèn Tanah Laut, Kalimantan Kidul 70812</p>
+                    </td>
+                    <td style="width:20%; border: none"><img  class="bakti_husada" src="asset_template/images/logo.png" width="100%"></td>
+                </tr>
+            </table>
+            <hr>
+    </div>
     <div class="container" style="padding=0px; margin:0px">
-     <br>
         <div class="isi" style="padding=0px; margin:0px">
-         <div class="judul">
-            <h4 style="margin:0px; ">DATA ANAK</h4>
-         </div>
-         <div class="container" style="padding: 20px;">
-            <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <h3 class="headtext" style="text-align: center;">Data Anak</h3>
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>No</th>
+                        <th>ID Anak</th>
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>Jenis Kelamin</th>
                         <th>Tempat, Tanggal Lahir</th>
+                        <th>Nama Ibu</th>
+                        <th>Nama Ayah</th>
+                        <th>No. Telp</th>
+                        <th>Nama Kelurahan</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($data as $d)
                     <tr>
                         <td>{{$loop->iteration}}</td>
+                        <td>{{$d->anak_id}}</td>
                         <td>{{$d->nama_anak}}</td>
                         <td>{{$d->alamat}}</td>
                         <td>{{$d->jk}}</td>
                         <td>{{$d->tempat_lahir}}, {{carbon\carbon::parse($d->tanggal_lahir)->format('d F Y')}}
                         </td>
+                        <td>{{$d->nama_ibu}}</td>
+                        <td>{{$d->nama_ayah}}</td>
+                        <td>{{$d->np_hp}}</td>
+                        <td>{{$d->nama_kelurahan}}</td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-         </div>
+            <br>
+            <br>
+            <table style="border: none">
+                <tr style="border: none">
+                    <td style="width: 60%;border: none;">
+                        
+                    </td>
+                    <td style="border: none">
+                    Pelaiharis , {{Carbon\carbon::now()->translatedFormat('d F Y')}}
+                    <br><br>
+                    <p style="margin:0px;">Kepala Puskesmas</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p style="text-decoration: underline; margin:0px;">Nama</p>
+                    <p style="margin:0px;">NIP. -</p>
+                    </td>
+                </tr>
+            </table>
+
         </div>
     </div>      
 </body>

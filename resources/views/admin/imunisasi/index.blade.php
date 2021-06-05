@@ -39,6 +39,9 @@
                                 <td>{{carbon\carbon::parse($d->tanggal_imunisasi)->translatedFormat('d F Y')}}</td>
                                 <td>{{$d->tempat_imunisasi}}</td>
                                 <td class="text-center">
+                                    <a class="btn btn-rounded btn-info"
+                                        href="{{Route('admin.imunisasi.show',['uuid'=>$d->id])}}"><i
+                                            class="material-icons">info</i></a>
                                     <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.imunisasi.edit',['uuid'=>$d->id])}}"><i
                                             class="material-icons">edit</i></a>
@@ -96,10 +99,6 @@
                     <div class="form-group">
                         <label for="">Tempat Imunisasi</label>
                         <input type="text" name="tempat_imunisasi" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Tempat Imunisasi</label>
-                        <input type="text" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">

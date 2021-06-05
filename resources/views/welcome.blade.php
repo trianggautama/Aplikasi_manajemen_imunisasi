@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Mentor Bootstrap Template - Index</title>
+  <title>Aplikasi manajemen Aplikasi</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,17 +44,15 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h5 class="logo mr-auto"><a href="index.html">Aplikasi Manajemen Imunisasi</a></h5>
+      <h5 class=" mr-auto"><a href="index.html">Aplikasi Manajemen Imunisasi</a></h5>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="about.html">Tenteng Aplikasi</a></li>
-          <li><a href="contact.html">Rekap</a></li>
-          <li><a href="contact.html">Kontak</a></li>
-
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#tentang">Tentang Aplikasi</a></li>
+          <li><a href="#rekap">Rekap</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -65,16 +63,16 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+    <div class="container text-center" data-aos="zoom-in" data-aos-delay="100">
       <h1>Puskesmas Pelaihari</h1>
       <h2>Aplikasi Manajemen Imunisasi Berbasis Web</h2>
-      <a href="courses.html" class="btn-get-started">Pendaftaran Imunisasi</a>
+      <a href="#pendaftaran" class="btn-get-started">Pendaftaran Imunisasi</a>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="tentang" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -84,63 +82,48 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="{{asset('template_depan/assets/img/about.jpg')}}" class="img-fluid" alt="">
+            <img src="{{asset('template_depan/assets/img/about.png')}}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
-                pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate
-            </p>
-            <a href="about.html" class="learn-more-btn">Learn More</a>
+            <p class="text-justify">Puskesmas Pelaihari merupakan salah satu puskesmas yang terdapatdiKecamatanPelaihari turut serta mengimplementasikan kebijakan tersebut dengan memberikan pelayanan terbatas secara menyeluruh dan terpadu di wilayah kerjanya meliputi upaya promotif (peningkatan), preventif (pencegahan), kuratif (penyembuhan) dan rehabilitatif (pemulihan). </p>
+            <p class="text-justify">Puskesmas harus selalu berupaya mendorong kemandirian masyarakat dan keluarga untuk hidup sehat, agar keluarga dan masyarakat makin berdaya di bidang kesehatan melalui peningkatan dan kemampuan untuk hidup sehat.</p>
+            <!-- <a href="about.html" class="learn-more-btn">Learn More</a> -->
           </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
+    <section id="rekap" class="counts section-bg">
       <div class="container">
 
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">1232</span>
-            <p>Students</p>
+            <p>Pegawai</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">64</span>
-            <p>Courses</p>
+            <p>Jenis Vaksin</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">42</span>
-            <p>Events</p>
+            <p>Anak</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">15</span>
-            <p>Trainers</p>
+            <p>Imunisasi</p>
           </div>
 
         </div>
 
       </div>
     </section><!-- End Counts Section -->
-    <section>
+    <section id="pendaftaran">
       <div class="container" data-aos="fade-up">
         <div class="text-center">
           <h3>Pendaftaran Imunisasi</h3>

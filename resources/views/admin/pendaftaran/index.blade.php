@@ -5,12 +5,12 @@
         <div class="col-md">
             <div class="card">
                 <div class="card-header">
-                    <div class="row">
+                    <div class="row"> 
                         <div class="col-md">
                             <h5>Data Pendaftaran</h5>
                         </div>
                         <div class="col-md text-right">
-                            <a class="btn btn-primary" href="#"><i class="material-icons">print</i> Cetak Data</a>
+                            <a class="btn btn-primary" href="{{Route('admin.laporan.pendaftaran')}}" target="_blank"><i class="material-icons">print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target=".bd-example-modal-lg">+ Tambah Data</button>
                         </div>
@@ -19,7 +19,7 @@
                 <div class="card-body">
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead>
-                            <tr>
+                            <tr> 
                                 <th>No</th>
                                 <th>Nama Anak</th>
                                 <th>Nama Orang Tua</th>
@@ -72,18 +72,6 @@
                             </tr>
                             @endforeach
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Anak</th>
-                                <th>Nama Orang Tua</th>
-                                <th>Tempat, Tanggal Lahir</th>
-                                <th>Alamat</th>
-                                <th>No. Hp</th>
-                                <th>Status</th>
-                                <th class="text-center">Aksi</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>
