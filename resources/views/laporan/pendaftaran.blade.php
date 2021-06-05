@@ -95,32 +95,48 @@
     </div>
     <div class="container" style="padding=0px; margin:0px">
         <div class="isi" style="padding=0px; margin:0px">
-        <h3 class="headtext" style="text-align: center;">Data Bidan</h3>
+        <h3 class="headtext" style="text-align: center;">Data Pendaftaran</h3>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Tempat, Tanggal Lahir</th>
-                        <th>No Hp</th>
-                        <th>Username</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($data as $d)
-                    <tr>
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$d->nama}}</td>
-                        <td>{{$d->jk}}</td>
-                        <td>{{$d->tempat_lahir}},
-                            {{carbon\carbon::parse($d->tgl_lahir)->translatedFormat('d M Y')}}</td>
-                        <td>{{$d->no_hp}}</td>
-                        <td>{{$d->user->username}}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    <thead>
+                        <tr> 
+                            <th>No</th>
+                            <th>Nama Anak</th>
+                            <th>Nama Orang Tua</th>
+                            <th>Tempat, Tanggal Lahir</th>
+                            <th>Alamat</th>
+                            <th>No. Hp</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($data as $d)
+
+                        <tr>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$d->nama}}</td>
+                            <td>{{$d->nama_orang_tua}}</td>
+                            <td>{{$d->tempat_lahir}},
+                                {{carbon\carbon::parse($d->tanggal_lahir)->translatedFormat('d F Y')}}</td>
+                            <td>{{$d->alamat}}</td>
+                            <td>{{$d->nomor_telepon}}</td>
+                            <td>
+                                @switch($d->status)
+                                @case(0)
+                                <span class="badge badge-info">belum diverifikasi</span>
+
+                                @break
+                                @case(1)
+                                <span class="badge badge-primary">terverifikasi</span>
+
+                                @break
+                                @default
+
+                                @endswitch
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             <br>
             <br>
             <table style="border: none">

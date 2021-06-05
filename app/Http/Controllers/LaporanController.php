@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Anak;
 use App\Models\Bidan;
 use App\Models\Pegawai;
+use App\Models\Pendaftaran;
 use App\Models\Vaksin;
 use PDF;
 use Illuminate\Http\Request;
@@ -45,6 +46,15 @@ class LaporanController extends Controller
         $pdf->setPaper('a4', 'landscape');
 
         return $pdf->stream('Laporan vaksin.pdf');
+    }
+
+    public function pendaftaran()
+    {
+        $data     = Pendaftaran::orderByDesc('pendaftaran_id')->get();
+        $pdf      = PDF::loadView('laporan.pendaftaran', ['data'=>$data]);
+        $pdf->setPaper('a4', 'landscape');
+
+        return $pdf->stream('Laporan pendaftaran.pdf');
     }
 }
  

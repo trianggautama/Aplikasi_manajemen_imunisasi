@@ -93,6 +93,7 @@ Route::middleware(['admin'])->group(function () {
             Route::get('/bidan', [LaporanController::class, 'bidan'])->name('bidan');
             Route::get('/anak', [LaporanController::class, 'anak'])->name('anak');
             Route::get('/vaksin', [LaporanController::class, 'vaksin'])->name('vaksin');
+            Route::get('/pendaftaran', [LaporanController::class, 'pendaftaran'])->name('pendaftaran');
         });
 
     });
