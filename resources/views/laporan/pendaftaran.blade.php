@@ -145,15 +145,14 @@
                         
                     </td>
                     <td style="border: none">
-                    Pelaiharis , {{Carbon\carbon::now()->translatedFormat('d F Y')}}
+                    Pelaihari , {{Carbon\carbon::now()->translatedFormat('d F Y')}}
                     <br><br>
                     <p style="margin:0px;">Kepala Puskesmas</p>
                     <br>
                     <br>
                     <br>
                     <br>
-                    <p style="text-decoration: underline; margin:0px;">Nama</p>
-                    <p style="margin:0px;">NIP. -</p>
+                    <p style="margin:0px;">.......................</p>
                     </td>
                 </tr>
             </table>

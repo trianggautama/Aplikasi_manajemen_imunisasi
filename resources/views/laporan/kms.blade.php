@@ -71,7 +71,7 @@
      }
 
      @page { 
-        size: 29 cm 21.5 cm ; 
+        size: 21.5 cm 29 cm ; 
          margin: 1 cm 1 cm 0 cm 1 cm !important;
          padding: 0px !important;
          }
@@ -95,28 +95,42 @@
     </div>
     <div class="container" style="padding=0px; margin:0px">
         <div class="isi" style="padding=0px; margin:0px">
-        <h3 class="headtext" style="text-align: center;">Data Bidan</h3>
+        <h3 class="headtext" style="text-align: center;">Data KMS Anak</h3>
+            <table style="border: none">
+                <tr style="border: none">
+                    <td style=" text-align: left; width: 24%;border: none;">Nama </td>
+                    <td style="text-align: left; border: none">: {{$anak->nama_anak}}</td>
+                </tr>
+                <tr style="border: none"> 
+                    <td style="text-align: left;border: none">Tempat, Tanggal Lahir </td>
+                    <td style="text-align: left; border: none">: {{$anak->tempat_lahir}}, {{carbon\carbon::parse($anak->tanggal_lahir)->format('d F Y')}}</td>
+                </tr>
+                <tr style="border: none"> 
+                    <td style="text-align: left;border: none">Nama Orangrua</td>
+                    <td style="text-align: left; border: none">: {{$anak->nama_ibu}}</td>
+                </tr>
+                <tr style="border: none">
+                    <td style="text-align: left; border: none">Alamat </td>
+                    <td style="text-align: left; border: none">: {{$anak->alamat}}</td>
+                </tr>
+            </table>
+            <br>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Nama</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Tempat, Tanggal Lahir</th>
-                        <th>No Hp</th>
-                        <th>Username</th>
+                        <th>Jenis Vaksin</th>
+                        <th>Tanggal Imunisasi</th>
+                        <th>Tempat Imunisasi</th>
+                        <th>Bidan</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($data as $d)
                     <tr>
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$d->nama}}</td>
-                        <td>{{$d->jk}}</td>
-                        <td>{{$d->tempat_lahir}},
-                            {{carbon\carbon::parse($d->tgl_lahir)->translatedFormat('d M Y')}}</td>
-                        <td>{{$d->no_hp}}</td>
-                        <td>{{$d->user->username}}</td>
+                        <td>{{$d->jadwal_imunisasi->vaksin->nama_vaksin}}</td>
+                        <td>{{carbon\carbon::parse($d->jadwal_imunisasi->tanggal_imunisasi)->translatedFormat('d M Y')}}</td> 
+                        <td>{{$d->jadwal_imunisasi->tempat_imunisasi}}</td>
+                        <td>{{$d->jadwal_imunisasi->bidan->nama}}</td>
                     </tr>
                     @endforeach
                 </tbody>

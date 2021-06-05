@@ -95,32 +95,30 @@
     </div>
     <div class="container" style="padding=0px; margin:0px">
         <div class="isi" style="padding=0px; margin:0px">
-        <h3 class="headtext" style="text-align: center;">Data Bidan</h3>
+        <h3 class="headtext" style="text-align: center;">Data Imunisasi</h3>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Tempat, Tanggal Lahir</th>
-                        <th>No Hp</th>
-                        <th>Username</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($data as $d)
-                    <tr>
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$d->nama}}</td>
-                        <td>{{$d->jk}}</td>
-                        <td>{{$d->tempat_lahir}},
-                            {{carbon\carbon::parse($d->tgl_lahir)->translatedFormat('d M Y')}}</td>
-                        <td>{{$d->no_hp}}</td>
-                        <td>{{$d->user->username}}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Vaksin</th>
+                            <th>Petugas Imunisasi</th>
+                            <th>Tanggal Imunisasi</th>
+                            <th>Tempat Imunisasi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($data as $d)
+
+                        <tr>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$d->bidan->nama}}</td>
+                            <td>{{$d->vaksin->nama_vaksin}}</td>
+                            <td>{{carbon\carbon::parse($d->tanggal_imunisasi)->translatedFormat('d F Y')}}</td>
+                            <td>{{$d->tempat_imunisasi}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             <br>
             <br>
             <table style="border: none">

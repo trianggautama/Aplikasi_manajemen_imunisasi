@@ -3,14 +3,14 @@
 <div class="main-content-container container-fluid p-4">
     <div class="row">
         <div class="col-md">
-            <div class="card">
+            <div class="card"> 
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md">
                             <h5>Data Kms ( {{$anak->nama_anak}} )</h5>
                         </div>
                         <div class="col-md text-right">
-                            <a class="btn btn-primary" href="#"><i class="material-icons">print</i> Cetak Data</a>
+                            <a class="btn btn-primary" href="{{Route('admin.laporan.kms',['anak_id'=>$anak->anak_id])}}" target="_blank"><i class="material-icons">print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target=".bd-example-modal-lg">+ Tambah Data</button>
                         </div>
@@ -21,6 +21,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>Nama Vaksin</th>
                                 <th>Tempat Imunisasi</th>
                                 <th>Tanggal Imunisasi</th>
                                 <th>Tinggi</th>
@@ -34,6 +35,7 @@
 
                             <tr>
                                 <td>{{$loop->iteration}}</td>
+                                <td>{{$k->jadwal_imunisasi->vaksin->nama_vaksin}}</td>
                                 <td>{{$k->jadwal_imunisasi->tempat_imunisasi}}</td>
                                 <td>{{carbon\carbon::parse($k->jadwal_imunisasi->tanggal_imunisasi)->translatedFormat('d F Y')}}
                                 </td>
@@ -44,7 +46,7 @@
                                     {{-- <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.kms.edit',['uuid'=>$k->anak_id])}}"><i
                                         class="material-icons">edit</i></a> --}}
-                                    <a class="btn btn-secondary" href="#"><i class="material-icons">delete</i></a>
+                                    <a href="{{Route('admin.kms.destroy',['uuid'=>$k->anak_id])}}" class="btn btn-secondary" onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                             @endforeach
@@ -72,10 +74,10 @@
                     <input type="hidden" name="anak_id" value="{{$anak->anak_id}}">
                     <div class="form-group mb-3">
                         <label for="">Imunisasi</label>
-                        <select name="imunisasi_id" id="" class="form-control" required>
+                        <select name="jadwal_imunisasi_id" id="" class="form-control" required>
                             <option value="">-- pilih imunisasi --</option>
                             @foreach ($imunisasi as $v)
-                            <option value="{{$v->id}}">Imunisasi di {{$v->tempat_imunisasi}},
+                            <option value="{{$v->id}}">Imunisasi {{$v->vaksin->nama_vaksin}},
                                 {{carbon\carbon::parse($v->tanggal_imunisasi)->translatedFormat('d F Y')}}</option>
                             @endforeach
                         </select>

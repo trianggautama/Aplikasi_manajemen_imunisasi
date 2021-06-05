@@ -94,6 +94,9 @@ Route::middleware(['admin'])->group(function () {
             Route::get('/anak', [LaporanController::class, 'anak'])->name('anak');
             Route::get('/vaksin', [LaporanController::class, 'vaksin'])->name('vaksin');
             Route::get('/pendaftaran', [LaporanController::class, 'pendaftaran'])->name('pendaftaran');
+            Route::get('/kms/{anak_id}', [LaporanController::class, 'kms'])->name('kms');
+            Route::get('/imunisasi', [LaporanController::class, 'imunisasi'])->name('imunisasi');
+            Route::get('/imunisasi/laporan/show/{id}', [LaporanController::class, 'imunisasi_show'])->name('imunisasi_show');
         });
 
     });

@@ -10,8 +10,9 @@
                             <h5>Detail Imunisasi</h5>
                         </div>
                         <div class="col-md text-right">
+                            <a href="{{Route('admin.laporan.imunisasi_show',['id'=>$data->id])}}" class="btn btn-primary" target="_blank"><i class="material-icons">print</i> Cetak Detail Imunisasi</a>
                             <a href="{{Route('admin.imunisasi.index')}}" class="btn btn-secondary"><i class="material-icons">keyboard_arrow_left</i> Kembali</a>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="card-body">
@@ -45,32 +46,32 @@
                     <h5>Detail Imunisasi</h5>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped">
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama</th>
-                                <th>Umur</th>
+                                <th>Nama Anak</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Nama Ibu</th>
                                 <th>Tinggi</th>
                                 <th>Berat</th>
-                                <th>Nama Ibu</th>
-                                <th>No Hp</th>
-                                <th class="text-center">Aksi</th>
+                                <th>Umur</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($kms as $k)
+
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td> 
-                                <td class="text-center"> 
-                                    <a class="btn btn-rounded btn-warning" href=""><i class="material-icons">info</i></a>
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$k->anak->nama_anak}}</td>
+                                <td>{{$k->anak->jk}}</td>
+                                <td>{{$k->anak->nama_ibu}}
                                 </td>
+                                <td>{{$k->tinggi_badan}} cm</td>
+                                <td>{{$k->berat_badan}} kg</td>
+                                <td>{{$k->umur}} bulan</td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

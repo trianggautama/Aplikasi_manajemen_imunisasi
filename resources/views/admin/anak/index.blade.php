@@ -39,7 +39,7 @@
                                 <td>{{$d->jk}}</td>
                                 <td>{{$d->tempat_lahir}}, {{carbon\carbon::parse($d->tanggal_lahir)->format('d F Y')}}
                                 </td>
-                                <td>08512131311</td>
+                                <td>{{$d->no_hp}}</td>
                                 <td class="text-center">
                                     <a class="btn btn-rounded btn-success"
                                         href="{{Route('admin.anak.show',['uuid'=>$d->anak_id])}}"><i

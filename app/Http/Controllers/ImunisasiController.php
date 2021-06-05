@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Bidan;
 use App\Models\JadwalImunisasi;
+use App\Models\Kms;
 use App\Models\Vaksin;
 use Illuminate\Http\Request;
 
@@ -22,14 +23,14 @@ class ImunisasiController extends Controller
         JadwalImunisasi::create($req->all());
 
         return back()->withToastSuccess('Data berhasil disimpan');
-    }
+    } 
 
     public function show($id)
     {
 
         $data = JadwalImunisasi::findOrFail($id);
-
-        return view('admin.imunisasi.show', compact('data'));
+        $kms  = Kms::whereJadwal_imunisasi_id($data->id)->latest()->get();  
+        return view('admin.imunisasi.show', compact('data','kms')); 
     }
 
     public function edit($id)

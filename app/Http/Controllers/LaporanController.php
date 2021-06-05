@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Anak;
 use App\Models\Bidan;
+use App\Models\JadwalImunisasi;
+use App\Models\Kms;
 use App\Models\Pegawai;
 use App\Models\Pendaftaran;
 use App\Models\Vaksin;
@@ -56,5 +58,34 @@ class LaporanController extends Controller
 
         return $pdf->stream('Laporan pendaftaran.pdf');
     }
-}
+
+    public function kms($anak_id)
+    {
+        $anak     = Anak::whereAnak_id($anak_id)->first();
+        $data     = Kms::whereAnakId($anak->anak_id)->latest()->get();
+        $pdf      = PDF::loadView('laporan.kms', ['data'=>$data,'anak'=>$anak]);
+        $pdf->setPaper('a4', 'landscape');
+
+        return $pdf->stream('Laporan KMS Anak.pdf');
+    }
+
+    public function imunisasi()
+    {
+        $data     = JadwalImunisasi::orderByDesc('id')->get();
+        $pdf      = PDF::loadView('laporan.imunisasi', ['data'=>$data]);
+        $pdf->setPaper('a4', 'landscape');
+
+        return $pdf->stream('Laporan imunisasi.pdf');
+    }
+
+    public function imunisasi_show($imunisasi_id)
+    {
+        $data     = JadwalImunisasi::findOrFail($imunisasi_id);
+        $kms      = Kms::whereJadwal_imunisasi_id($data->id)->latest()->get();  
+        $pdf      = PDF::loadView('laporan.imunisasi_show', ['data'=>$data,'kms'=>$kms]);
+        $pdf->setPaper('a4', 'landscape');
+
+        return $pdf->stream('Laporan imunisasi show.pdf');
+    } 
+} 
  
