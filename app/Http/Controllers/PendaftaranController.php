@@ -50,7 +50,7 @@ class PendaftaranController extends Controller
         return redirect()->route('admin.pendaftaran.index')->withToastSuccess('Data berhasil diubah');
     }
 
-    public function show()
+    public function show($id)
     {
         $data = Pendaftaran::findOrFail($id);
 
