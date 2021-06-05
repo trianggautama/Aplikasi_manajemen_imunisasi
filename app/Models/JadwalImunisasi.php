@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Vaksin;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class JadwalImunisasi extends Model
 {
@@ -23,5 +24,11 @@ class JadwalImunisasi extends Model
     public function bidan(): BelongsTo
     {
         return $this->belongsTo(Bidan::class, 'bidan_id', 'bidan_id');
+    }
+
+
+    public function kms(): HasMany
+    {
+        return $this->hasMany(Kms::class, 'kms_id', 'kms_id');
     }
 }

@@ -32,7 +32,7 @@ class Kms extends Model
      */
     public function jadwal_imunisasi(): BelongsTo
     {
-        return $this->belongsTo(JadwalImunisasi::class, 'imunisasi_id', 'id');
+        return $this->belongsTo(JadwalImunisasi::class, 'jadwal_imunisasi_id', 'id');
     }
 
 }

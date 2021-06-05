@@ -104,7 +104,7 @@
               </div>
             </form>
             <ul class="navbar-nav border-left flex-row ">
-              <li class="nav-item border-right dropdown notifications">
+              <!-- <li class="nav-item border-right dropdown notifications">
                 <a class="nav-link nav-link-icon text-center" href="#" role="button" id="dropdownMenuLink"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="nav-link-icon__wrapper">
@@ -139,7 +139,7 @@
                   </a>
                   <a class="dropdown-item notification__all text-center" href="#"> View all Notifications </a>
                 </div>
-              </li>
+              </li> -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button"
                   aria-haspopup="true" aria-expanded="false">
