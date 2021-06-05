@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md">
-                            <h5>Edit Data Bidan</h5>
+                            <h5>Edit Data Imunisasi</h5>
                         </div>
                     </div>
                 </div>
