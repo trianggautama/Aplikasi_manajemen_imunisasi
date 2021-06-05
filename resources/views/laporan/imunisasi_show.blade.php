@@ -129,7 +129,6 @@
                 </thead>
                 <tbody>
                     @foreach ($kms as $k)
-
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$k->anak->nama_anak}}</td>
@@ -140,7 +139,7 @@
                         <td>{{$k->berat_badan}} kg</td>
                         <td>{{$k->umur}} bulan</td>
                     </tr>
-                    @endforeach
+                    @endforeach  
                 </tbody>
             </table>
             <br>
