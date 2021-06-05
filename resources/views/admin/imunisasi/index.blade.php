@@ -34,8 +34,8 @@
 
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$d->bidan->nama}}</td>
                                 <td>{{$d->vaksin->nama_vaksin}}</td>
+                                <td>{{$d->bidan->nama}}</td>
                                 <td>{{carbon\carbon::parse($d->tanggal_imunisasi)->translatedFormat('d F Y')}}</td>
                                 <td>{{$d->tempat_imunisasi}}</td>
                                 <td class="text-center">

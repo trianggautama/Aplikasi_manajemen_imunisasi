@@ -34,10 +34,11 @@ class ImunisasiController extends Controller
 
     public function edit($id)
     {
-
+        $vaksin = Vaksin::all();
+        $bidan = Bidan::all();
         $data = JadwalImunisasi::findOrFail($id);
 
-        return view('admin.imunisasi.edit', compact('data'));
+        return view('admin.imunisasi.edit', compact('data', 'bidan', 'vaksin'));
     }
 
     public function update(Request $req, $id)
