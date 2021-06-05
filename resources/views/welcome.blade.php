@@ -54,7 +54,7 @@
           <li><a href="#tentang">Tentang Aplikasi</a></li>
           <li><a href="#rekap">Rekap</a></li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav><!-- .nav- -->
 
       <a href="{{Route('login')}}" class="get-started-btn">Login</a>
 
