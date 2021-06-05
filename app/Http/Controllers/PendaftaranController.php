@@ -34,16 +34,27 @@ class PendaftaranController extends Controller
         return back()->withToastSuccess('Data berhasil diverifikasi');
     }
 
-    public function edit()
+    public function edit($id)
     {
+        $data = Pendaftaran::findOrFail($id);
 
-        return view('admin.pendaftaran.edit');
+        return view('admin.pendaftaran.edit', compact('data'));
+    }
+
+    public function update($id, Request $req)
+    {
+        $data = Pendaftaran::findOrFail($id);
+
+        $data->update($req->all());
+
+        return redirect()->route('admin.pendaftaran.index')->withToastSuccess('Data berhasil diubah');
     }
 
     public function show()
     {
+        $data = Pendaftaran::findOrFail($id);
 
-        return view('admin.pendaftaran.show');
+        return view('admin.pendaftaran.show', compact('data'));
     }
 
     public function anak()
@@ -52,10 +63,25 @@ class PendaftaranController extends Controller
         return view('admin.pendaftaran.anak');
     }
 
+    public function store(Request $req)
+    {
+        Pendaftaran::create($req->all());
+
+        return back()->withToastSuccess('Pendaftaran berhasil');
+    }
+
     public function storePendaftaran(Request $req)
     {
         Pendaftaran::create($req->all());
 
         return redirect()->route('welcome')->withToastSuccess('Pendaftaran berhasil');
+    }
+
+    public function destroy($od)
+    {
+        Pendaftaran::findOrFail($id)->delete();
+
+        return back()->withSuccess('Data berhasil dihapus');
+
     }
 }

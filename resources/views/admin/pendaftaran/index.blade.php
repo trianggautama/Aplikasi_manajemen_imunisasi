@@ -102,7 +102,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="">
+                <form action="{{Route('admin.pendaftaran.store')}}" method="POST">
+                    @csrf
                     <div class="input-group mb-3">
                         <label for="">Nama Anak</label>
                         <div class="input-group input-group-seamless">
@@ -111,7 +112,8 @@
                                     <i class="material-icons">medication</i>
                                 </span>
                             </span>
-                            <input type="text" class="form-control" id="form1-username" placeholder="Nama Anak">
+                            <input type="text" name="nama" class="form-control" id="form1-username"
+                                placeholder="Nama Anak" required>
                         </div>
                     </div>
                     <div class="row">
@@ -124,14 +126,15 @@
                                             <i class="material-icons">location_on</i>
                                         </span>
                                     </span>
-                                    <input type="text" class="form-control" id="form1-username" placeholder="Kota...">
+                                    <input type="text" name="tempat_lahir" class="form-control" id="form1-username"
+                                        placeholder="Kota..." required>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-group">
                                 <label for="">Tanggal Lahir</label>
-                                <input class="form-control" type="date">
+                                <input class="form-control" type="date" name="tanggal_lahir" required>
                             </div>
                         </div>
                     </div>
@@ -143,12 +146,13 @@
                                     <i class="material-icons">medication</i>
                                 </span>
                             </span>
-                            <input type="text" class="form-control" id="form1-username" placeholder="Nama Orang Tua (Ibu)">
+                            <input type="text" name="nama_orang_tua" class="form-control" id="form1-username"
+                                placeholder="Nama Orang Tua (Ibu)" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="">Alamat</label>
-                        <textarea name="" id="" class="form-control"></textarea>
+                        <textarea name="alamat" id="" class="form-control" required></textarea>
                     </div>
                     <div class="input-group mb-3">
                         <label for="">Nomor Hp</label>
@@ -158,16 +162,17 @@
                                     <i class="material-icons">phone</i>
                                 </span>
                             </span>
-                            <input type="text" class="form-control" id="form1-username" maxlength="14">
+                            <input type="text" name="nomor_telepon" class="form-control" id="form1-username"
+                                maxlength="14" required>
                         </div>
                     </div>
-                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="material-icons">close</i>
                     Batal</button>
-                <button type="button" class="btn btn-primary"><i class="material-icons">save</i> Simpan Data</button>
+                <button type="submit" class="btn btn-primary"><i class="material-icons">save</i> Simpan Data</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
