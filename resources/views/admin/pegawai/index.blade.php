@@ -26,6 +26,7 @@
                                 <th>Jenis Kelamin</th>
                                 <th>Tempat, Tanggal Lahir</th>
                                 <th>No Hp</th>
+                                <th>Alamat</th>
                                 <th>Username</th>
                                 <th class="text-center">Aksi</th>
                             </tr>
@@ -39,12 +40,16 @@
                                 <td>{{$d->tempat_lahir}},
                                     {{carbon\carbon::parse($d->tgl_lahir)->translatedFormat('d M Y')}}</td>
                                 <td>{{$d->no_hp}}</td>
+                                <td>{{$d->alamat}}</td>
                                 <td>{{$d->user->username}}</td>
                                 <td class="text-center">
                                     <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.pegawai.edit',['uuid'=>$d->user_id])}}"><i
                                             class="material-icons">edit</i></a>
-                                    <a href="{{Route('admin.pegawai.destroy',['uuid'=>$d->user_id])}}" class="btn btn-secondary" onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i class="material-icons">delete</i></a>
+                                    <a href="{{Route('admin.pegawai.destroy',['uuid'=>$d->user_id])}}"
+                                        class="btn btn-secondary"
+                                        onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i
+                                            class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                             @endforeach
