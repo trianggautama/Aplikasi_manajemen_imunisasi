@@ -19,7 +19,7 @@ class CreateKmsTable extends Migration
             $table->unsignedBigInteger('anak_id');
             $table->unsignedBigInteger('berat_badan');
             $table->unsignedBigInteger('tinggi_badan');
-            $table->unsignedBigInteger('umur');
+            $table->string('umur');
             $table->timestamps();
             $table->foreign('anak_id')->references('anak_id')->on('anak')->onDelete('cascade');
             $table->foreign('jadwal_imunisasi_id')->references('id')->on('jadwal_imunisasis')->onDelete('cascade');

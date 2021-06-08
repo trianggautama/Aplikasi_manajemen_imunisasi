@@ -64,8 +64,8 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <button type="button" class="btn  btn-secondary"><i
-                                        class="material-icons">keyboard_arrow_left</i> Kembali</button>
+                                <a href="{{Route('welcome')}}" type="button" class="btn  btn-secondary"><i
+                                        class="material-icons">keyboard_arrow_left</i> Kembali</a>
                                 <button type="submit" class="btn  btn-primary"><i class="material-icons">login</i>
                                     Login</button>
                             </div>

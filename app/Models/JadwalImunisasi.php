@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Bidan;
+use App\Models\Kms;
 use App\Models\Vaksin;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -25,7 +27,6 @@ class JadwalImunisasi extends Model
     {
         return $this->belongsTo(Bidan::class, 'bidan_id', 'bidan_id');
     }
-
 
     public function kms(): HasMany
     {

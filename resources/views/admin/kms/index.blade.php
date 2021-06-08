@@ -3,14 +3,15 @@
 <div class="main-content-container container-fluid p-4">
     <div class="row">
         <div class="col-md">
-            <div class="card"> 
+            <div class="card">
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md">
                             <h5>Data Kms ( {{$anak->nama_anak}} )</h5>
                         </div>
                         <div class="col-md text-right">
-                            <a class="btn btn-primary" href="{{Route('admin.laporan.kms',['anak_id'=>$anak->anak_id])}}" target="_blank"><i class="material-icons">print</i> Cetak Data</a>
+                            <a class="btn btn-primary" href="{{Route('admin.laporan.kms',['anak_id'=>$anak->anak_id])}}"
+                                target="_blank"><i class="material-icons">print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target=".bd-example-modal-lg">+ Tambah Data</button>
                         </div>
@@ -41,12 +42,15 @@
                                 </td>
                                 <td>{{$k->tinggi_badan}} cm</td>
                                 <td>{{$k->berat_badan}} kg</td>
-                                <td>{{$k->umur}} tahun</td>
+                                <td>{{$k->umur}}</td>
                                 <td class="text-center">
                                     {{-- <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.kms.edit',['uuid'=>$k->anak_id])}}"><i
                                         class="material-icons">edit</i></a> --}}
-                                    <a href="{{Route('admin.kms.destroy',['uuid'=>$k->anak_id])}}" class="btn btn-secondary" onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i class="material-icons">delete</i></a>
+                                    <a href="{{Route('admin.kms.destroy',['uuid'=>$k->anak_id])}}"
+                                        class="btn btn-secondary"
+                                        onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i
+                                            class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                             @endforeach
@@ -106,15 +110,15 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <label for="">Umur (bulan)</label>
+                        <label for="">Umur</label>
                         <div class="input-group input-group-seamless">
                             <span class="input-group-prepend">
                                 <span class="input-group-text">
                                     <i class="material-icons">mood</i>
                                 </span>
                             </span>
-                            <input type="text" name="umur" class="form-control" id="form1-username"
-                                value="{{carbon\carbon::parse($anak->tanggal_lahir)->age}}">
+                            <input type="text" name="umur" class="form-control" id="form1-username" value="" required
+                                placeholder="contoh : 1 Hari/1 Bulan/1 Tahun">
                         </div>
                     </div>
             </div>

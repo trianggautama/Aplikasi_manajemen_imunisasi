@@ -21,7 +21,7 @@ class KmsController extends Controller
     }
 
     public function store(Request $req)
-    { 
+    {
         Kms::create($req->all());
 
         return back()->withToastSuccess('Data berhasil disimpan');
