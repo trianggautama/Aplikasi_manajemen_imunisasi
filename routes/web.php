@@ -48,7 +48,7 @@ Route::middleware(['admin'])->group(function () {
             Route::get('/detail/{uuid}', [AnakController::class, 'show'])->name('show');
             Route::get('/{uuid}', [AnakController::class, 'edit'])->name('edit');
             Route::put('/{uuid}', [AnakController::class, 'update'])->name('update');
-            Route::get('/delete/{uuid}', [AnakController::class, 'destroy'])->name('destroy'); 
+            Route::get('/delete/{uuid}', [AnakController::class, 'destroy'])->name('destroy');
         });
 
         Route::namespace ('vaksin')->prefix('vaksin')->name('vaksin.')->group(function () {
@@ -75,7 +75,7 @@ Route::middleware(['admin'])->group(function () {
             Route::get('/{uuid}', [KmsController::class, 'index'])->name('index');
             Route::post('/store', [KmsController::class, 'store'])->name('store');
             Route::get('/edit/{uuid}', [KmsController::class, 'edit'])->name('edit');
-            Route::put('/update/{uuid}', [KmsController::class, 'update'])->name('update');
+            Route::put('/edit/{uuid}', [KmsController::class, 'update'])->name('update');
             Route::get('/delete/{uuid}', [KmsController::class, 'destroy'])->name('destroy');
         });
 
@@ -84,7 +84,7 @@ Route::middleware(['admin'])->group(function () {
             Route::post('/', [ImunisasiController::class, 'store'])->name('store');
             Route::get('/show/{uuid}', [ImunisasiController::class, 'show'])->name('show');
             Route::get('/edit/{uuid}', [ImunisasiController::class, 'edit'])->name('edit');
-            Route::put('/update/{uuid}', [ImunisasiController::class, 'update'])->name('update');
+            Route::put('/edit/{uuid}', [ImunisasiController::class, 'update'])->name('update');
             Route::get('/delete/{uuid}', [ImunisasiController::class, 'destroy'])->name('destroy');
         });
 

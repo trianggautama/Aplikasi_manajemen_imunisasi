@@ -17,7 +17,7 @@ class CreateKmsTable extends Migration
             $table->bigIncrements('kms_id');
             $table->unsignedBigInteger('jadwal_imunisasi_id');
             $table->unsignedBigInteger('anak_id');
-            $table->unsignedBigInteger('berat_badan');
+            $table->string('berat_badan');
             $table->unsignedBigInteger('tinggi_badan');
             $table->string('umur');
             $table->timestamps();
