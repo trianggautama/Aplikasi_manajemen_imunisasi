@@ -47,12 +47,12 @@
                                     {{-- <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.kms.edit',['uuid'=>$k->anak_id])}}"><i
                                         class="material-icons">edit</i></a> --}}
-                                    <a href="{{Route('admin.kms.destroy',['uuid'=>$k->anak_id])}}"
+                                    <a href="{{Route('admin.kms.destroy',['uuid'=>$k->kms_id])}}"
                                         class="btn btn-secondary"
                                         onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i
                                             class="material-icons">delete</i></a>
                                 </td>
-                            </tr>
+                            </tr> 
                             @endforeach
                         </tbody>
                     </table>
