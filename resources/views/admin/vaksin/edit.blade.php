@@ -44,7 +44,7 @@
                                     placeholder=". . . " value="{{$data->p_imunisasi}}" required>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
+                        {{-- <div class="input-group mb-3">
                             <label for="">Waktu Pemberian</label>
                             <div class="input-group input-group-seamless">
                                 <span class="input-group-prepend">
@@ -54,31 +54,31 @@
                                 </span>
                                 <input type="date" name="waktu_pemberian" class="form-control" id="form1-username"
                                     value="{{$data->waktu_pemberian}}" required>
-                            </div>
-                        </div>
-                        <div class="input-group mb-3">
-                            <label for="">Ketegori umur</label>
-                            <div class="input-group input-group-seamless">
-                                <span class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="material-icons">child_care</i>
-                                    </span>
-                                </span>
-                                <input type="text" name="k_umur" class="form-control" id="form1-username"
-                                    placeholder="1-2 tahun" value="{{$data->k_umur}}" required>
-                            </div>
-                        </div>
                     </div>
-                    <div class="card-footer text-right">
-                        <a href="{{Route('admin.vaksin.index')}}" class="btn btn-secondary"><i
-                                class="material-icons">keyboard_arrow_left</i> Batal</a>
-                        <button type="submit" class="btn btn-primary"><i class="material-icons">save</i> Simpan
-                            Data</button>
-                    </div>
-                </form>
+            </div> --}}
+            <div class="input-group mb-3">
+                <label for="">Ketegori umur</label>
+                <div class="input-group input-group-seamless">
+                    <span class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="material-icons">child_care</i>
+                        </span>
+                    </span>
+                    <input type="text" name="k_umur" class="form-control" id="form1-username" placeholder="1-2 tahun"
+                        value="{{$data->k_umur}}" required>
+                </div>
             </div>
         </div>
+        <div class="card-footer text-right">
+            <a href="{{Route('admin.vaksin.index')}}" class="btn btn-secondary"><i
+                    class="material-icons">keyboard_arrow_left</i> Batal</a>
+            <button type="submit" class="btn btn-primary"><i class="material-icons">save</i> Simpan
+                Data</button>
+        </div>
+        </form>
     </div>
+</div>
+</div>
 </div>
 
 @endsection

@@ -11,7 +11,7 @@
                         </div>
                         <div class="col-md text-right">
                             <a class="btn btn-primary" href="{{Route('admin.laporan.vaksin')}}" target="_blank"><i
-                                    class="material-icons" >print</i> Cetak Data</a>
+                                    class="material-icons">print</i> Cetak Data</a>
                             <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target=".bd-example-modal-lg">+ Tambah Data</button>
                         </div>
@@ -25,7 +25,7 @@
                                 <th>Nama Vaksin</th>
                                 <th>Keterangan</th>
                                 <th>Pemberian Imunisasi</th>
-                                <th>Waktu Imunisasi</th>
+                                {{-- <th>Waktu Imunisasi</th> --}}
                                 <th>Kategori Umur</th>
                                 <th class="text-center">Aksi</th>
                             </tr>
@@ -37,13 +37,16 @@
                                 <td>{{$d->nama_vaksin}}</td>
                                 <td>{{$d->keterangan}}</td>
                                 <td>{{$d->p_imunisasi}}</td>
-                                <td>{{$d->waktu_pemberian}}</td>
-                                <td>{{$d->k_umur}}</td> 
+                                {{-- <td>{{$d->waktu_pemberian}}</td> --}}
+                                <td>{{$d->k_umur}}</td>
                                 <td class="text-center">
                                     <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.vaksin.edit',['uuid'=> $d->vaksin_id])}}"><i
                                             class="material-icons">edit</i></a>
-                                    <a href="{{Route('admin.vaksin.destroy',['uuid'=>$d->vaksin_id])}}" class="btn btn-secondary" onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i class="material-icons">delete</i></a>
+                                    <a href="{{Route('admin.vaksin.destroy',['uuid'=>$d->vaksin_id])}}"
+                                        class="btn btn-secondary"
+                                        onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i
+                                            class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                             @endforeach
@@ -96,7 +99,7 @@
                                 placeholder=". . . " required>
                         </div>
                     </div>
-                    <div class="input-group mb-3">
+                    {{-- <div class="input-group mb-3">
                         <label for="">Waktu Pemberian</label>
                         <div class="input-group input-group-seamless">
                             <span class="input-group-prepend">
@@ -106,7 +109,7 @@
                             </span>
                             <input type="date" name="waktu_pemberian" class="form-control" id="form1-username" required>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="input-group mb-3">
                         <label for="">Ketegori umur</label>
                         <div class="input-group input-group-seamless">
