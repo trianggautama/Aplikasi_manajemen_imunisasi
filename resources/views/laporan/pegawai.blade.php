@@ -121,7 +121,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>ID Pegawai</th>
+                        {{-- <th>ID Pegawai</th> --}}
                         <th>NIP Pegawai</th>
                         <th>Nama</th>
                         <th>Alamat</th>
@@ -134,7 +134,7 @@
                     @foreach($data as $d)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$d->pegawai_id}}</td>
+                        {{-- <td>{{$d->pegawai_id}}</td> --}}
                         <td>{{$d->nip}}</td>
                         <td>{{$d->nama}}</td>
                         <td>{{$d->alamat}}</td>
