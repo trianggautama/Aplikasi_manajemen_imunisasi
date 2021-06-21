@@ -144,7 +144,7 @@
                         </td>
                         <td>{{$d->nama_ibu}}</td>
                         <td>{{$d->nama_ayah}}</td>
-                        <td>{{$d->np_hp}}</td>
+                        <td>{{$d->no_hp}}</td>
                         <td>{{$d->nama_kelurahan}}</td>
                     </tr>
                     @endforeach
