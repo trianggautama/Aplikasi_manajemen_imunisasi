@@ -16,6 +16,18 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="input-group mb-3">
+                            <label for="">NIP Bidan</label>
+                            <div class="input-group input-group-seamless">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="material-icons">account_circle</i>
+                                    </span>
+                                </span>
+                                <input type="text" name="nip" value="{{$user->bidan->nip}}" class="form-control"
+                                    id="form1-username" placeholder="NIP Bidan" required>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
                             <label for="">Nama</label>
                             <div class="input-group input-group-seamless">
                                 <span class="input-group-prepend">

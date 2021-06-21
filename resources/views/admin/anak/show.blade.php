@@ -14,6 +14,11 @@
                 <div class="card-body">
                     <table class="table table-striped">
                         <tr>
+                            <td>ID Anak</td>
+                            <td>: A - {{$data->anak_id}}</td>
+                            <td></td>
+                        </tr>
+                        <tr>
                             <td style="width:20%">Nama Anak</td>
                             <td>: {{$data->nama_anak}}</td>
                             <td></td>

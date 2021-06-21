@@ -16,6 +16,7 @@ class CreateBidansTable extends Migration
         Schema::create('bidan', function (Blueprint $table) {
             $table->bigIncrements('bidan_id');
             $table->unsignedBigInteger('user_id');
+            $table->string('nip', 50);
             $table->string('nama', 50);
             $table->string('alamat', 50);
             $table->string('jk', 30);
