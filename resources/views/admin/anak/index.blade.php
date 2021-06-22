@@ -22,6 +22,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>ID Anak</th>
                                 <th>Nama</th>
                                 <th>Alamat</th>
                                 <th>Jenis Kelamin</th>
@@ -34,6 +35,7 @@
                             @foreach($data as $d)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
+                                <td>A - {{$d->anak_id}}</td>
                                 <td>{{$d->nama_anak}}</td>
                                 <td>{{$d->alamat}}</td>
                                 <td>{{$d->jk}}</td>
@@ -47,7 +49,10 @@
                                     <a class="btn btn-rounded btn-primary"
                                         href="{{Route('admin.anak.edit',['uuid'=>$d->anak_id])}}"><i
                                             class="material-icons">edit</i></a>
-                                    <a href="{{Route('admin.anak.destroy',['uuid'=>$d->anak_id])}}" class="btn btn-secondary" onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i class="material-icons">delete</i></a>
+                                    <a href="{{Route('admin.anak.destroy',['uuid'=>$d->anak_id])}}"
+                                        class="btn btn-secondary"
+                                        onclick="return confirm('Apa anda yakin ingin menghapus data?')"><i
+                                            class="material-icons">delete</i></a>
                                 </td>
                             </tr>
                             @endforeach

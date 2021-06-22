@@ -22,6 +22,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>NIP</th>
                                 <th>Nama</th>
                                 <th>Jenis Kelamin</th>
                                 <th>Tempat, Tanggal Lahir</th>
@@ -35,6 +36,7 @@
                             @foreach($data as $d)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
+                                <td>{{$d->nip}}</td>
                                 <td>{{$d->nama}}</td>
                                 <td>{{$d->jk}}</td>
                                 <td>{{$d->tempat_lahir}},
@@ -76,6 +78,18 @@
                 @csrf
                 <div class="modal-body">
                     <input type="hidden" name="role" value="1">
+                    <div class=" input-group mb-3">
+                        <label for="">NIP</label>
+                        <div class="input-group input-group-seamless">
+                            <span class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="material-icons">account_circle</i>
+                                </span>
+                            </span>
+                            <input type="text" name="nip" class="form-control" id="form1-username"
+                                placeholder="NIP Pegawai" required>
+                        </div>
+                    </div>
                     <div class=" input-group mb-3">
                         <label for="">Nama</label>
                         <div class="input-group input-group-seamless">
