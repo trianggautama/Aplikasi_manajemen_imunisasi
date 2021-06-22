@@ -10,9 +10,12 @@
                             <h5>Detail Imunisasi</h5>
                         </div>
                         <div class="col-md text-right">
-                            <a href="{{Route('admin.laporan.imunisasi_show',['id'=>$data->id])}}" class="btn btn-primary" target="_blank"><i class="material-icons">print</i> Cetak Detail Imunisasi</a>
-                            <a href="{{Route('admin.imunisasi.index')}}" class="btn btn-secondary"><i class="material-icons">keyboard_arrow_left</i> Kembali</a>
-                        </div> 
+                            <a href="{{Route('admin.laporan.imunisasi_show',['id'=>$data->id])}}"
+                                class="btn btn-primary" target="_blank"><i class="material-icons">print</i> Cetak Detail
+                                Imunisasi</a>
+                            <a href="{{Route('admin.imunisasi.index')}}" class="btn btn-secondary"><i
+                                    class="material-icons">keyboard_arrow_left</i> Kembali</a>
+                        </div>
                     </div>
                 </div>
                 <div class="card-body">
@@ -46,7 +49,7 @@
                     <h5>Detail Imunisasi</h5>
                 </div>
                 <div class="card-body">
-                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -69,7 +72,7 @@
                                 </td>
                                 <td>{{$k->tinggi_badan}} cm</td>
                                 <td>{{$k->berat_badan}} kg</td>
-                                <td>{{$k->umur}} bulan</td>
+                                <td>{{$k->umur}} </td>
                             </tr>
                             @endforeach
                         </tbody>
