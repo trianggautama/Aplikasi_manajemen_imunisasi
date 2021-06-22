@@ -96,7 +96,7 @@
     <div class="container" style="padding=0px; margin:0px">
         <div class="isi" style="padding=0px; margin:0px">
         <h3 class="headtext" style="text-align: center;">Data Imunisasi</h3>
-            <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -108,7 +108,6 @@
                     </thead>
                     <tbody>
                         @foreach ($data as $d)
-
                         <tr>
                             <td>{{$loop->iteration}}</td>
                             <td>{{$d->bidan->nama}}</td>
@@ -118,9 +117,8 @@
                         </tr>
                         @endforeach
                     </tbody>
-                </table>
-            <br>
-            <br>
+                </table> 
+                <br>   
             <table style="border: none">
                 <tr style="border: none">
                     <td style="width: 60%;border: none;">
