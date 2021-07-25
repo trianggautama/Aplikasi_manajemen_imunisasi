@@ -118,25 +118,23 @@
                         @endforeach
                     </tbody>
                 </table> 
-                <br>   
-            <table style="border: none">
-                <tr style="border: none">
-                    <td style="width: 60%;border: none;">
-                        
-                    </td>
-                    <td style="border: none">
-                    Pelaihari , {{Carbon\carbon::now()->translatedFormat('d F Y')}}
-                    <br><br>
-                    <p style="margin:0px;">Kepala Puskesmas</p>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <p style="margin:0px;">.......................</p>
-                    </td>
-                </tr>
-            </table>
-
+                <br>
+                <div class="ttd" >
+                <table style="border: none; width:200px !important;">
+                    <tr style="border: none">
+                        <td style="border: none; text-align:center;">
+                            Pelaihari , {{Carbon\carbon::now()->translatedFormat('d F Y')}}
+                            <br><br>
+                            <p style="margin:0px;">Kepala Puskesmas</p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <p style="margin:0px;">.......................</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>      
 </body>
