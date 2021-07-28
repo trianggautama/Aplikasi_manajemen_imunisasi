@@ -117,6 +117,7 @@
     <div class="container" style="padding=0px; margin:0px">
         <div class="isi" style="padding=0px; margin:0px">
             <h3 class="headtext" style="text-align: center;">Data Pegawai</h3>
+            <p>Laporan Data Tahun : 2020</p>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
